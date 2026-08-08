@@ -67,11 +67,13 @@ document.getElementById('year').textContent = new Date().getFullYear();
     dot.style.top = y + 'px';
     dot.style.opacity = '1';
 
-    var br = btn.getBoundingClientRect();
-    var bx = e.clientX - (br.left + br.width / 2);
-    var by = e.clientY - (br.top + br.height / 2);
-    var bd = Math.hypot(bx, by);
-    btn.style.transform = bd < 130 ? 'translate(' + bx * 0.25 + 'px,' + by * 0.25 + 'px)' : 'translate(0,0)';
+    if (btn) {
+      var br = btn.getBoundingClientRect();
+      var bx = e.clientX - (br.left + br.width / 2);
+      var by = e.clientY - (br.top + br.height / 2);
+      var bd = Math.hypot(bx, by);
+      btn.style.transform = bd < 130 ? 'translate(' + bx * 0.25 + 'px,' + by * 0.25 + 'px)' : 'translate(0,0)';
+    }
 
     var wr = word.getBoundingClientRect();
     var wx = e.clientX - (wr.left + wr.width / 2);
@@ -82,8 +84,8 @@ document.getElementById('year').textContent = new Date().getFullYear();
 
   hero.addEventListener('mouseleave', function(){
     dot.style.opacity = '0';
-    btn.style.transform = 'translate(0,0)';
-    word.style.transform = 'translate(0,0)';
+    if (btn) btn.style.transform = 'translate(0,0)';
+    if (word) word.style.transform = 'translate(0,0)';
   });
 })();
 

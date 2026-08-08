@@ -135,7 +135,7 @@ img{ max-width:100%; display:block; }
   min-height: auto;
   display:flex; flex-direction:column; align-items:center; justify-content:center;
   overflow:hidden;
-  padding: 72px 24px 56px;
+  padding: 48px 24px 36px;
   background: linear-gradient(180deg, var(--accent-soft) 0%, var(--bg) 62%);
 }
 .hero__spotlight{
@@ -286,14 +286,14 @@ img{ max-width:100%; display:block; }
 }
 .hero h1{
   font-family: var(--font-display);
-  font-size: clamp(1.15rem, 2.2vw, 1.6rem);
-  font-weight:700; font-style: italic; letter-spacing:-0.02em; line-height:1.45;
-  text-wrap: balance; margin-bottom: 32px;
+  font-size: clamp(1.35rem, 2.4vw, 1.75rem);
+  font-weight: 600; font-style: italic; letter-spacing: -0.01em; line-height: 1.5;
+  color: var(--ink); text-wrap: balance; margin-bottom: 32px;
   animation: greetIn 0.7s cubic-bezier(.22,1,.36,1) 0.18s both;
 }
 .hero__actions{ display:flex; gap:14px; justify-content:flex-start; flex-wrap:wrap; animation: greetIn 0.7s cubic-bezier(.22,1,.36,1) 0.52s both; }
 .hero__line{ display: block; }
-.hero__line + .hero__line{ margin-top: 10px; }
+.hero__line + .hero__line{ margin-top: 6px; }
 .hero h1 .word{ display:inline-block; transition: transform .15s ease; color: var(--accent); }
 .hero__lede{
   font-size: 1.1rem; color: var(--sub); font-weight:500;

@@ -486,26 +486,17 @@ img{ max-width:100%; display:block; }
   letter-spacing:.04em; text-transform:uppercase; padding:3px 9px; border-radius:999px;
 }
 
-/* Traveling dot — moves up the timeline line from BIT Mesra → Digital Green */
-.journey::after{
-  content:''; position:absolute;
-  left: 15px;
-  top: calc(100% - 14px);
-  width: 10px; height: 10px; border-radius: 50%;
-  background: var(--accent);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 22%, transparent),
-              0 0 14px 4px color-mix(in srgb, var(--accent) 35%, transparent);
-  opacity: 0;
+/* Direction arrow between journey stops */
+.journey__stop + .journey__stop::before{
+  content: "↑";
+  position: absolute;
+  left: -37px;
+  top: -22px;
+  font-size: .75rem;
+  color: var(--sub);
   z-index: 2;
-  animation: journeyDot 6s cubic-bezier(0.45, 0, 0.55, 1) infinite;
+  line-height: 1;
 }
-@keyframes journeyDot {
-  0%                  { top: calc(100% - 14px); opacity: 0; }
-  6%                  { opacity: 0.9; }
-  88%                 { opacity: 0.9; }
-  97%, 100%           { top: 8px; opacity: 0; }
-}
-@media (prefers-reduced-motion: reduce){ .journey::after{ animation: none; } }
 
 @media (max-width: 560px){
   .journey{ padding-left: 44px; }

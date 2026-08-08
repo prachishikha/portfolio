@@ -1,0 +1,17 @@
+# Resume
+*.pdf
+
+# Personal photos
+images/profilepicture.png
+images/kenya.JPG
+images/reading.JPG
+images/reading2.heic
+images/reading2.jpg
+images/*.HEIC
+images/*.heic
+images/5f3eca2c-c00b-44f9-8c14-1d9068916fd1.JPG
+images/0fcf541cbe9e8a08469b9b14a1367e53.jpg
+images/b13cf2a0-74f3-4397-a498-0ca96f68caca.jpg
+
+# System files
+.DS_Store

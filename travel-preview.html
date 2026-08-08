@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Travel Background Preview</title>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { background: #141118; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; padding: 32px 24px; }
+  h1 { color: #F2F0F7; font-size: 1rem; font-weight: 600; margin-bottom: 28px; opacity: .6; letter-spacing: .05em; text-transform: uppercase; }
+  .grid { display: flex; flex-direction: column; gap: 32px; max-width: 600px; }
+  .card { position: relative; border-radius: 16px; overflow: hidden; display: grid; }
+  .card > * { grid-area: 1/1; }
+  .card img { width: 100%; height: auto; display: block; }
+  .card__overlay {
+    background: linear-gradient(to bottom, rgba(0,0,0,.1) 20%, rgba(0,0,0,.55) 60%, rgba(0,0,0,.85) 100%);
+  }
+  .card__text {
+    align-self: end; z-index: 1;
+    padding: 24px 28px 28px;
+  }
+  .card__label { font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; color: rgba(255,255,255,.6); margin-bottom: 10px; }
+  .card__text h3 { color: #fff; font-size: 1.2rem; font-weight: 700; margin-bottom: 8px; text-shadow: 0 1px 8px rgba(0,0,0,.7); }
+  .card__text p { color: #fff; font-size: .9rem; line-height: 1.6; text-shadow: 0 1px 6px rgba(0,0,0,.8); }
+</style>
+</head>
+<body>
+<h1>Travel background preview — pick your favourite</h1>
+<div class="grid">
+  <div class="card">
+    <img src="images/travel-1.jpg" alt="Travel 1">
+    <div class="card__overlay"></div>
+    <div class="card__text">
+      <p class="card__label">Option A — travel-1</p>
+      <h3>Travelling</h3>
+      <p>I absolutely love to travel — it's how I meet new people, make new friends, and pick up new perspectives. And if you can't find me, check the mountains first.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/travel-3.jpg" alt="Travel 3">
+    <div class="card__overlay"></div>
+    <div class="card__text">
+      <p class="card__label">Option B — travel-3</p>
+      <h3>Travelling</h3>
+      <p>I absolutely love to travel — it's how I meet new people, make new friends, and pick up new perspectives. And if you can't find me, check the mountains first.</p>
+    </div>
+  </div>
+  <div class="card">
+    <img src="images/travel-4.jpg" alt="Travel 4">
+    <div class="card__overlay"></div>
+    <div class="card__text">
+      <p class="card__label">Option C — travel-4</p>
+      <h3>Travelling</h3>
+      <p>I absolutely love to travel — it's how I meet new people, make new friends, and pick up new perspectives. And if you can't find me, check the mountains first.</p>
+    </div>
+  </div>
+</div>
+</body>
+</html>

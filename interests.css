@@ -89,13 +89,71 @@
   margin: 0;
 }
 
+/* Scroll wrapper — hosts the right-edge fade and swipe hint */
+.interests-scroll-wrap {
+  position: relative;
+}
+.interests-scroll-wrap::after {
+  content: '';
+  position: absolute;
+  top: 0; right: 0; bottom: 0;
+  width: 90px;
+  background: linear-gradient(to right, transparent, var(--bg));
+  pointer-events: none;
+  z-index: 2;
+  transition: opacity .35s ease;
+}
+.interests-scroll-wrap.is-end::after { opacity: 0; }
+
+.interests-hint {
+  position: absolute;
+  right: 10px;
+  bottom: 20px;
+  font-size: .7rem;
+  font-weight: 700;
+  letter-spacing: .07em;
+  text-transform: uppercase;
+  color: var(--sub);
+  z-index: 3;
+  pointer-events: none;
+  animation: hintNudge 2.2s ease-in-out infinite;
+}
+.interests-scroll-wrap.is-end .interests-hint { opacity: 0; transition: opacity .3s; }
+
+@keyframes hintNudge {
+  0%, 60%, 100% { transform: translateX(0); opacity: .6; }
+  30%            { transform: translateX(4px); opacity: 1; }
+}
+
 /* On wider screens, cards stretch to fill evenly */
 @media (min-width: 980px) {
   .interest-card { flex: 1 0 260px; }
+  /* All 3 cards fit — no scroll needed, hide fade and hint */
+  .interests-scroll-wrap::after { display: none; }
+  .interests-hint { display: none; }
 }
 
 @media (max-width: 560px) {
-  .interest-card { flex: 0 0 82vw; height: 400px; }
+  .interest-card { flex: 0 0 76vw; height: 400px; }
+}
+
+/* Dot indicators */
+.interests-dots {
+  display: flex; gap: 8px; justify-content: center;
+  margin-top: 18px;
+}
+.interests-dot {
+  width: 7px; height: 7px; border-radius: 50%;
+  background: var(--line); border: none; padding: 0; cursor: pointer;
+  transition: background .2s ease, transform .2s ease;
+}
+.interests-dot.active {
+  background: var(--accent); transform: scale(1.25);
+}
+
+/* On desktop, hide dots (all cards visible) */
+@media (min-width: 980px) {
+  .interests-dots { display: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {

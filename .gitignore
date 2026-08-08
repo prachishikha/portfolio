@@ -1,27 +1,12 @@
-# Resume
-*.pdf
+# Resume — deploy via Netlify drag-and-drop, not git
+PrachiShikha-Resume.pdf
 
-# Personal photos
+# Photos — deploy via Netlify drag-and-drop, not git
 images/profilepicture.png
 images/kenya.JPG
 images/reading.JPG
-images/reading2.*
-images/*.HEIC
-images/*.heic
-images/*.jpg
-images/*.JPG
+images/travel-3.jpg
+images/yoga-2.jpg
 
-# Re-include stock/brand images
-!images/*-unsplash.jpg
-!images/amadeus*.png
-!images/BIT.png
-!images/logo-*.png
-!images/logo-*.svg
-!images/Gmail_icon_*.webp
-!images/unnamed.png
-!images/travel-*.jpg
-!images/yoga-*.jpg
-!images/reading-bg.jpg
-
-# System files
-.DS_Store
+# contact.js contains the Web3Forms API key — keep local only
+contact.js

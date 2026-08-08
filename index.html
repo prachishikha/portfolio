@@ -5,9 +5,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Prachi Shikha — Senior Product Manager</title>
 <meta name="description" content="Portfolio of Prachi Shikha — Senior Product Manager building AI-native, marketplace, and B2B SaaS products.">
-<link rel="stylesheet" href="styles.css?v=17">
-<link rel="stylesheet" href="contact.css?v=12">
-<link rel="stylesheet" href="interests.css?v=13">
+<link rel="stylesheet" href="styles.css?v=23">
+<link rel="stylesheet" href="contact.css?v=13">
+<link rel="stylesheet" href="interests.css?v=15">
 </head>
 <body>
 
@@ -20,9 +20,8 @@
         <span></span><span></span><span></span>
       </button>
       <ul class="nav__links" id="navLinks">
-        <li><a class="nav__li-badge" href="https://linkedin.com/in/prachishikha" target="_blank" rel="noopener" aria-label="LinkedIn profile"><svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>Connect on LinkedIn</a></li>
         <li><button class="nav__cta" onclick="document.getElementById('resumeModal').showModal()"><svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:-2px;margin-right:6px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="9" y1="13" x2="15" y2="13"/><line x1="9" y1="17" x2="15" y2="17"/></svg>View my résumé</button></li>
-        <li><a href="#contact" class="nav__cta nav__cta--outline"><svg width="14" height="14" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" style="display:inline-block;vertical-align:-2px;margin-right:6px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="M2 7l10 7 10-7"/></svg>Contact me</a></li>
+        <li><a href="#contact" class="nav__cta nav__cta--outline">Contact me</a></li>
       </ul>
     </nav>
   </header>
@@ -37,7 +36,7 @@
         <div class="hero__text">
           <h1 id="heroHeadline"><span class="hero__line"><!-- <span class="hero__wave">👋</span> -->Hi, I'm Prachi.</span><span class="hero__line">I build products that solve real-world problems with technology, increasingly with <span class="word" id="magWord">AI</span>.</span></h1>
           <div class="hero__actions">
-            <!-- <a class="btn btn--primary" id="magBtn" href="#projects">See my work →</a> -->
+            <a class="btn btn--primary" id="magBtn" href="#projects">See my work →</a>
             </div>
         </div>
         <div class="hero__photo-wrap" id="photoWrap">
@@ -154,6 +153,7 @@
     <section class="section" id="interests">
       <div class="section__inner">
         <h2>When I'm not building products</h2>
+        <div class="interests-scroll-wrap">
         <div class="interests-scroll" role="list">
 
           <article class="interest-card" role="listitem">
@@ -193,6 +193,13 @@
           </article>
 
         </div>
+        <span class="interests-hint" aria-hidden="true">swipe →</span>
+        </div><!-- /.interests-scroll-wrap -->
+        <div class="interests-dots" id="interestsDots">
+          <button class="interests-dot active" aria-label="Card 1"></button>
+          <button class="interests-dot" aria-label="Card 2"></button>
+          <button class="interests-dot" aria-label="Card 3"></button>
+        </div>
       </div>
     </section>
 
@@ -201,6 +208,10 @@
       <div class="section__inner section__inner--center">
         <h2>Let's connect.</h2>
         <p class="contact__lede">Always happy to talk — product, AI, or just a good conversation.</p>
+        <a class="contact__linkedin" href="https://linkedin.com/in/prachishikha" target="_blank" rel="noopener">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+          Connect on LinkedIn
+        </a>
 
         <div class="contact__form-card">
           <p class="contact__form-label">Quick prompts to save you time</p>
@@ -241,7 +252,7 @@
   </dialog>
 
   <footer class="site-footer">
-    <p>© <span id="year"></span> Prachi Shikha. Built with plain HTML, CSS &amp; JS.</p>
+    <p>© <span id="year"></span> Prachi Shikha.</p>
   </footer>
 
   <dialog id="resumeModal" class="resume-modal" onclick="if(event.target===this)this.close()">
@@ -260,7 +271,7 @@
     var w=document.querySelector('.hero__wave');
     if(w){ w.style.animation='none'; w.offsetWidth; w.style.animation='wave 1.4s ease 0s 1'; }
   });</script>
-  <script src="script.js?v=2"></script>
+  <script src="script.js?v=3"></script>
   <script src="road-animation.js"></script>
   <script src="journey.js"></script>
   <script src="contact.js"></script>

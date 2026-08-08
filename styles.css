@@ -109,6 +109,8 @@ img{ max-width:100%; display:block; }
 .nav__cta:hover{ color: var(--bg) !important; opacity:.82; }
 .nav__cta--outline{ background: transparent !important; color: var(--ink) !important; border: 1.5px solid var(--ink); }
 .nav__cta--outline:hover{ background: var(--ink) !important; color: var(--bg) !important; opacity:1; }
+.nav__text-link{ color: var(--sub); font-size:.9rem; font-weight:600; transition: color .15s; }
+.nav__text-link:hover{ color: var(--ink); }
 .nav__toggle{
   display:none; flex-direction:column; gap:4px;
   background:none; border:none; cursor:pointer; padding:8px;
@@ -124,9 +126,21 @@ img{ max-width:100%; display:block; }
     max-height:0; overflow:hidden; transition: max-height .25s ease;
   }
   .nav__links.open{ max-height: 400px; }
-  .nav__links li{ width:100%; }
-  .nav__links a{ display:block; padding: 14px 24px; width:100%; }
-  .nav__cta{ border-radius:0; }
+  .nav__links li{ width:100%; border-bottom: 1px solid var(--line); }
+  .nav__links li:last-child{ border-bottom: none; }
+  /* Strip all button/link styles in the mobile dropdown — plain text rows */
+  .nav__links a,
+  .nav__links button{
+    display:block; width:100%; padding: 16px 24px;
+    text-align:left; border-radius:0;
+    font-size:.95rem; font-weight:600;
+    background: transparent !important;
+    color: var(--ink) !important;
+    border: none !important;
+    box-shadow: none !important;
+  }
+  .nav__links a:hover,
+  .nav__links button:hover{ background: var(--bg-alt) !important; }
 }
 
 /* ===================== Hero ===================== */
@@ -300,9 +314,13 @@ img{ max-width:100%; display:block; }
   max-width: 52ch; margin: 0 auto 34px;
 }
 @media (max-width: 720px){
-  .hero__inner{ flex-direction: column-reverse; text-align:center; gap:32px; }
-  .hero__photo-wrap{ width:180px; height:180px; }
+  .hero__inner{ flex-direction: column-reverse; text-align:center; gap:24px; }
+  .hero__photo-wrap{ width:160px; height:160px; }
   .hero__actions{ justify-content:center; }
+  .hero{ padding: 32px 20px 20px; }
+  .hero h1{ font-size: 1.05rem; margin-bottom: 16px; }
+  .hero__actions{ width: 100%; }
+  .hero__actions .btn{ width: 100%; justify-content: center; }
 }
 
 .hero__scroll{
@@ -502,6 +520,12 @@ img{ max-width:100%; display:block; }
   .journey{ padding-left: 44px; }
   .journey::before{ left: 15px; }
   .journey__icon{ left: -44px; width: 32px; height: 32px; font-size: .95rem; }
+  .journey__card h3{ padding-right: 72px; }
+  .section{ padding: 44px 20px; }
+  #interests{ padding: 44px 20px; }
+  .section h2{ font-size: 1.65rem; }
+  .project-grid{ margin-top: 28px; }
+  .project-card{ padding: 20px; }
 }
 
 /* ===================== Skills ===================== */
@@ -613,7 +637,16 @@ img{ max-width:100%; display:block; }
 .interest-chip__icon{ font-size:1.05rem; }
 
 /* ===================== Contact ===================== */
-.contact__lede{ color: var(--sub); font-size:1.02rem; max-width:48ch; margin:0 auto 30px; font-weight:500; }
+.contact__lede{ color: var(--sub); font-size:1.02rem; max-width:48ch; margin:0 auto 16px; font-weight:500; }
+.contact__linkedin{
+  display: inline-flex; align-items: center; gap: 8px;
+  color: var(--sub); font-size:.92rem; font-weight:600;
+  border: 1.5px solid var(--line); border-radius: 999px;
+  padding: 8px 18px; margin-bottom: 30px;
+  transition: background .15s ease, color .15s ease, border-color .15s ease;
+}
+.contact__linkedin:hover{ background: var(--ink); color: var(--bg) !important; border-color: var(--ink); }
+.contact__linkedin svg{ width:15px; height:15px; fill:currentColor; flex-shrink:0; }
 .contact__location{ margin-top:16px; font-size:.84rem; color: var(--sub); }
 
 /* ===================== Footer ===================== */

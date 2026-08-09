@@ -109,5 +109,5 @@
   .contact__form-card{ padding: 22px 18px; }
   .contact__row{ flex-direction: column; }
   .contact__prompts{ grid-template-columns: 1fr; }
-  .contact__prompt{ white-space: normal; text-align: left; width: 100%; }
+  .contact__prompt{ white-space: normal; text-align: left; width: 100%; padding: 12px 16px; }
 }

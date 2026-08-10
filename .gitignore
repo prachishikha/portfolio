@@ -3,10 +3,6 @@ PrachiShikha-Resume.pdf
 
 # Photos — deploy via Netlify drag-and-drop, not git
 images/profilepicture.png
-images/kenya.JPG
-images/reading.JPG
-images/travel-3.jpg
-images/yoga-2.jpg
 
-# contact.js contains the Web3Forms API key — keep local only
-contact.js
+# OS files
+.DS_Store

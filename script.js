@@ -4,10 +4,10 @@ document.getElementById('year').textContent = new Date().getFullYear();
 // Protect images — block right-click save and drag
 (function(){
   document.addEventListener('contextmenu', function(e){
-    if (e.target.tagName === 'IMG') e.preventDefault();
+    if (e.target.tagName === 'IMG' || e.target.closest('.life__card')) e.preventDefault();
   });
   document.addEventListener('dragstart', function(e){
-    if (e.target.tagName === 'IMG') e.preventDefault();
+    if (e.target.tagName === 'IMG' || e.target.closest('.life__card')) e.preventDefault();
   });
 })();
 

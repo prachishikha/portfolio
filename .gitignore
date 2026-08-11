@@ -1,8 +1,11 @@
-# Resume — deploy via Netlify drag-and-drop, not git
-PrachiShikha-Resume.pdf
+# Resume PDF — deploy via Netlify drag-and-drop, not git
+*.pdf
 
-# Photos — deploy via Netlify drag-and-drop, not git
-images/profilepicture.png
+# Profile photos — deploy via Netlify drag-and-drop, not git
+images/*.png
+images/*.jpg
+images/*.jpeg
+images/*.webp
 
 # OS files
 .DS_Store

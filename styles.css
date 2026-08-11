@@ -275,9 +275,9 @@ img{ max-width:100%; display:block; }
   letter-spacing: .02em; white-space: nowrap;
 }
 .journey__card h3{ font-family: var(--font-display); font-size:1.08rem; font-weight:600; margin: 4px 0 4px; }
-.journey__roles{ display:flex; flex-direction:row; align-items:center; flex-wrap:wrap; gap:4px; margin-bottom:2px; }
-.journey__role{ display:flex; align-items:center; }
-.journey__role-title{ font-size:.78rem; font-weight:700; letter-spacing:.04em; color:var(--accent); }
+.journey__roles{ display:flex; flex-direction:column; flex-wrap:wrap; gap:0; margin-top:16px; }
+.journey__role{ display:flex; align-items:center; margin-bottom:10px; }
+.journey__role-title{ font-size:.82rem; font-weight:700; letter-spacing:.04em; color:var(--accent); }
 /* Award badge */
 .journey__award{
   display: inline-flex; align-items: center; gap: 6px;
@@ -285,8 +285,9 @@ img{ max-width:100%; display:block; }
   background: var(--accent2-soft); border-radius: 999px;
   padding: 4px 12px; margin: 10px 0 12px;
 }
-.journey__cgpa-row{ flex: 0 0 100%; margin-top: 2px; }
-.journey__cgpa{ font-size: .75rem; color: var(--sub); font-weight: 500; }
+.journey__roles .journey__role-title{ color: var(--ink); letter-spacing: 0; }
+.journey__cgpa-row{ flex: 0 0 100%; margin-top: 0; }
+.journey__cgpa{ font-size: .88rem; color: var(--sub); font-weight: 500; }
 
 .journey__meta-row{
   position:absolute; top:16px; right:20px;
@@ -364,8 +365,7 @@ img{ max-width:100%; display:block; }
 .journey__role-head-row{ display:flex; align-items:baseline; margin-bottom:10px; }
 .journey__role-head-row .journey__role-title{ font-size:.82rem; font-weight:700; color:var(--ink); letter-spacing:0; }
 .journey__bullets{ list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:9px; }
-.journey__bullet{ display:grid; grid-template-columns:64px 1fr; gap:14px; align-items:baseline; }
-.journey__bullet-metric{ font-size:.78rem; font-weight:800; color:var(--accent); font-style:normal; }
+.journey__bullet{ display:flex; }
+.journey__bullet::before{ content:"\2014"; color:var(--accent); font-weight:700; margin-right:10px; flex-shrink:0; }
 .journey__bullet-text{ font-size:.88rem; color:var(--sub); font-weight:500; line-height:1.5; font-style:normal !important; }
 .journey__bullet-text strong{ color:var(--ink); font-weight:700; }
-@media (max-width:560px){ .journey__bullet{ grid-template-columns:54px 1fr; gap:10px; } }

@@ -172,8 +172,6 @@ img{ max-width:100%; display:block; }
 }
 .hero__actions{ display:flex; gap:14px; justify-content:flex-start; flex-wrap:wrap; animation: greetIn 0.7s cubic-bezier(.22,1,.36,1) 0.52s both; }
 .hero__line{ display: block; }
-.hero__line + .hero__line{ margin-top: 4px; font-family: var(--font-display); font-style: normal; font-weight: 700; color: var(--sub); }
-.hero h1 .word{ display:inline-block; }
 .hero__lede{
   font-size: 1.1rem; color: var(--sub); font-weight:500;
   max-width: 52ch; margin: 0 auto 34px;

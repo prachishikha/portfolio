@@ -1,6 +1,18 @@
 // Footer year
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Open LinkedIn in a new tab on desktop; same tab on mobile (avoids orphaned
+// blank tabs when the OS intercepts the navigation to hand off to the app)
+(function(){
+  if (window.matchMedia('(pointer: fine)').matches) {
+    var linkedin = document.querySelector('.contact__option[href*="linkedin"]');
+    if (linkedin) {
+      linkedin.setAttribute('target', '_blank');
+      linkedin.setAttribute('rel', 'noopener');
+    }
+  }
+})();
+
 // Protect images — block right-click save and drag
 (function(){
   document.addEventListener('contextmenu', function(e){

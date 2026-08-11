@@ -174,14 +174,15 @@ img{ max-width:100%; display:block; }
 .hero__line{ display: block; }
 .hero__lede{
   font-size: 1.1rem; color: var(--sub); font-weight:500;
-  max-width: 52ch; margin: 0 auto 34px;
+  max-width: 52ch; margin: 0 0 26px;
 }
 @media (max-width: 720px){
   .hero__inner{ flex-direction: column-reverse; text-align:center; gap:24px; }
+  .hero__lede{ margin-left:auto; margin-right:auto; }
   .hero__photo-wrap{ width:160px; height:160px; }
   .hero__actions{ justify-content:center; }
   .hero{ padding: 32px 20px 20px; }
-  .hero h1{ font-size: 1.05rem; margin-bottom: 16px; }
+  .hero h1{ margin-bottom: 16px; }
   .hero__actions{ width: 100%; }
   .hero__actions .btn{ width: 100%; justify-content: center; }
 }
@@ -338,11 +339,12 @@ img{ max-width:100%; display:block; }
 @media (max-width: 560px){
   .journey{ padding-left: 44px; }
   .journey::before{ left: 15px; }
-  .journey__card h3{ padding-right: 72px; }
+  .journey__year{ position: static; display: block; margin-bottom: 6px; }
+  .journey__meta-row{ position: static; margin-bottom: 6px; }
+  .journey__card h3{ padding-right: 0; }
   .section{ padding: 44px 20px; }
   .focus{ padding: 44px 20px; }
   .nav{ padding: 14px 20px; }
-  .section h2, .focus__inner h2{ font-size: 1.65rem; }
 }
 
 /* Résumé modal */
@@ -382,9 +384,6 @@ img{ max-width:100%; display:block; }
 }
 .resume-modal__close:hover{ color: var(--ink); background: var(--bg-alt); }
 .resume-modal__frame{ flex: 1; width: 100%; border: none; }
-
-/* ===================== Contact ===================== */
-.contact__location{ margin-top:16px; font-size:.84rem; color: var(--sub); }
 
 /* ===================== Footer ===================== */
 .site-footer{
